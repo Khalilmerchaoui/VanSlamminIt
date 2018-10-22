@@ -1,0 +1,300 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:paddingRight="10dp"
+            android:background="?attr/colorPrimary"
+            app:popupTheme="@style/AppTheme.PopupOverlay" >
+
+            <ImageView
+                android:layout_width="64dp"
+                android:layout_height="64dp"
+                android:src="@drawable/logo"
+                android:layout_gravity="left"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/app_name"
+                android:textSize="42sp"
+                android:textColor="#ffffff"
+                android:layout_gravity="right" />
+        </android.support.v7.widget.Toolbar>
+
+    </android.support.design.widget.AppBarLayout>
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:scrollbars="none">
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:paddingBottom="16dp"
+        android:background="#3b3b3b"
+        >
+
+        <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Reset FTP Information"
+        android:textColor="#FFF"
+        android:id="@+id/textView"
+        android:layout_gravity="center_horizontal"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="80dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Host"
+            android:textColor="#FFF"
+            android:textSize="25sp"
+            android:id="@+id/hftp"
+            android:layout_alignTop="@+id/hostftp"
+            android:layout_alignParentStart="true" />
+
+        <EditText
+            android:layout_width="190dp"
+            android:layout_height="30dp"
+            android:id="@+id/hostftp"
+            android:layout_marginTop="25dp"
+            android:gravity="center"
+            android:textSize="18sp"
+            android:background="@drawable/edittext_style"
+            android:layout_below="@+id/textView"
+            android:layout_alignParentEnd="true" />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="User"
+            android:textColor="#FFF"
+            android:textSize="25sp"
+            android:id="@+id/uftp"
+            android:layout_alignTop="@+id/userftp"
+            android:layout_alignEnd="@+id/hftp" />
+        <EditText
+            android:layout_width="190dp"
+            android:layout_height="30dp"
+            android:id="@+id/userftp"
+            android:layout_marginTop="24dp"
+            android:gravity="center"
+            android:textSize="18sp"
+            android:background="@drawable/edittext_style"
+            android:layout_below="@+id/hostftp"
+            android:layout_alignParentEnd="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Password"
+            android:textColor="#FFF"
+            android:textSize="25sp"
+            android:id="@+id/pftp"
+            android:layout_alignTop="@+id/passftp"
+            android:layout_alignStart="@+id/uftp" />
+        <EditText
+            android:layout_width="190dp"
+            android:layout_height="30dp"
+            android:id="@+id/passftp"
+            android:inputType="textPassword"
+            android:layout_marginTop="24dp"
+            android:gravity="center"
+            android:textSize="18sp"
+            android:background="@drawable/edittext_style"
+            android:layout_below="@+id/userftp"
+            android:layout_centerVertical="true"
+            android:layout_alignStart="@+id/userftp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Path"
+            android:textColor="#FFF"
+            android:textSize="25sp"
+            android:id="@+id/paftp"
+            android:layout_alignTop="@+id/pathftp"
+            android:layout_alignStart="@+id/pftp" />
+        <EditText
+            android:layout_width="190dp"
+            android:layout_height="30dp"
+            android:id="@+id/pathftp"
+            android:layout_marginTop="24dp"
+            android:gravity="center"
+            android:textSize="18sp"
+            android:background="@drawable/edittext_style"
+            android:layout_below="@+id/passftp"
+            android:layout_centerVertical="true"
+            android:layout_alignStart="@+id/userftp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Reset MySQL Information"
+            android:textColor="#FFF"
+            android:id="@+id/textView1"
+            android:layout_gravity="center_horizontal"
+            android:layout_below="@+id/pathftp"
+            android:layout_marginTop="15dp"
+            android:layout_centerHorizontal="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Host"
+            android:textColor="#FFF"
+            android:textSize="25sp"
+            android:id="@+id/hmysql"
+            android:layout_alignTop="@+id/hostmysql"
+            android:layout_alignParentStart="true" />
+
+        <EditText
+            android:layout_width="190dp"
+            android:layout_height="30dp"
+            android:id="@+id/hostmysql"
+            android:layout_marginTop="25dp"
+            android:gravity="center"
+            android:textSize="18sp"
+            android:background="@drawable/edittext_style"
+            android:layout_below="@+id/textView1"
+            android:layout_alignParentEnd="true" />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="User"
+            android:textColor="#FFF"
+            android:textSize="25sp"
+            android:id="@+id/umysql"
+            android:layout_alignTop="@+id/usermysql"
+            android:layout_alignEnd="@+id/hmysql" />
+        <EditText
+            android:layout_width="190dp"
+            android:layout_height="30dp"
+            android:id="@+id/usermysql"
+            android:layout_marginTop="24dp"
+            android:gravity="center"
+            android:textSize="18sp"
+            android:background="@drawable/edittext_style"
+            android:layout_below="@+id/hostmysql"
+            android:layout_alignParentEnd="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Password"
+            android:textColor="#FFF"
+            android:textSize="25sp"
+            android:id="@+id/pmysql"
+            android:layout_alignTop="@+id/passmysql"
+            android:layout_alignStart="@+id/umysql" />
+        <EditText
+            android:layout_width="190dp"
+            android:layout_height="30dp"
+            android:id="@+id/passmysql"
+            android:inputType="textPassword"
+            android:layout_marginTop="24dp"
+            android:gravity="center"
+            android:textSize="18sp"
+            android:background="@drawable/edittext_style"
+            android:layout_below="@+id/usermysql"
+            android:layout_centerVertical="true"
+            android:layout_alignStart="@+id/usermysql" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Database"
+            android:textColor="#FFF"
+            android:textSize="25sp"
+            android:id="@+id/datamysql"
+            android:layout_alignTop="@+id/databasemysql"
+            android:layout_alignStart="@+id/pmysql" />
+        <EditText
+            android:layout_width="190dp"
+            android:layout_height="30dp"
+            android:id="@+id/databasemysql"
+            android:layout_marginTop="24dp"
+            android:gravity="center"
+            android:textSize="18sp"
+            android:background="@drawable/edittext_style"
+            android:layout_below="@+id/passmysql"
+            android:layout_centerVertical="true"
+            android:layout_alignStart="@+id/usermysql" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Reset Image Path"
+            android:textColor="#FFF"
+            android:id="@+id/textView2"
+            android:layout_gravity="center_horizontal"
+            android:layout_below="@+id/databasemysql"
+            android:layout_marginTop="15dp"
+            android:layout_centerHorizontal="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Path"
+            android:textColor="#FFF"
+            android:textSize="25sp"
+            android:id="@+id/paimage"
+            android:layout_alignTop="@+id/pathimage"
+            android:layout_alignStart="@+id/pftp" />
+        <EditText
+            android:layout_width="190dp"
+            android:layout_height="30dp"
+            android:id="@+id/pathimage"
+            android:layout_marginTop="24dp"
+            android:gravity="center"
+            android:textSize="18sp"
+            android:background="@drawable/edittext_style"
+            android:layout_below="@+id/textView2"
+            android:layout_centerVertical="true"
+            android:layout_alignStart="@+id/databasemysql" />
+
+        <Button
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/pathimage"
+            android:text="Reset"
+            android:layout_marginTop="40dp"
+            android:textSize="32sp"
+            android:textAllCaps="false"
+            android:background="@drawable/button_style_blue"
+            android:textColor="#FFF"
+            android:id="@+id/reset" />
+    </RelativeLayout>
+    </ScrollView>
+    </android.support.design.widget.CoordinatorLayout>

@@ -1,0 +1,310 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context=".LoginActivity">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:paddingRight="10dp"
+            android:background="?attr/colorPrimary"
+            app:popupTheme="@style/AppTheme.PopupOverlay" >
+
+            <ImageView
+                android:layout_width="64dp"
+                android:layout_height="64dp"
+                android:src="@drawable/logo"
+                android:layout_gravity="left"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/app_name"
+                android:textSize="42sp"
+                android:textColor="#ffffff"
+                android:layout_gravity="right" />
+        </android.support.v7.widget.Toolbar>
+
+    </android.support.design.widget.AppBarLayout>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:orientation="vertical" android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:paddingBottom="16dp"
+        android:background="#3b3b3b"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Service Attempt Result"
+            android:textColor="#c5b553"
+            android:layout_gravity="center_horizontal"
+            android:textSize="25sp"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="70dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Defendant Names"
+            android:textColor="#FFF"
+            android:layout_marginTop="10dp"
+            android:id="@+id/textView3" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_marginTop="10dp"
+            android:paddingLeft="5dp"
+            android:textColor="#000"
+            android:inputType="textCapWords"
+            android:background="@drawable/edittext_style2"
+            android:id="@+id/defendant" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Case Name"
+            android:textColor="#FFF"
+            android:layout_marginTop="10dp"
+            android:id="@+id/textView4" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_marginTop="10dp"
+            android:paddingLeft="5dp"
+            android:inputType="textCapWords"
+            android:background="@drawable/edittext_style2"
+            android:id="@+id/casename" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Server Name"
+            android:textColor="#FFF"
+            android:layout_marginTop="10dp"
+            android:id="@+id/textView5" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_marginTop="10dp"
+            android:paddingLeft="5dp"
+            android:textColor="#000"
+            android:inputType="textCapWords"
+            android:background="@drawable/edittext_style2"
+            android:id="@+id/server" />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Date (mm/dd/yyyy)"
+            android:textColor="#FFF"
+            android:layout_marginTop="10dp"
+            android:id="@+id/textView6" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_marginTop="10dp"
+            android:paddingLeft="5dp"
+            android:textColor="#000"
+            android:background="@drawable/edittext_style2"
+            android:id="@+id/date" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Time (hh:mm:ss) - UTC"
+            android:textColor="#FFF"
+            android:layout_marginTop="10dp"
+            android:id="@+id/textView7" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_marginTop="10dp"
+            android:paddingLeft="5dp"
+            android:textColor="#000"
+            android:background="@drawable/edittext_style2"
+            android:id="@+id/time" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Result"
+            android:textColor="#FFF"
+            android:layout_marginTop="10dp"
+            android:id="@+id/textView8" />
+        <Spinner
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/edittext_style2"
+            android:popupBackground="@drawable/edittext_style2"
+            android:id="@+id/spinner"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Upload A Picture"
+            android:textColor="#FFF"
+            android:layout_marginTop="10dp"
+            android:id="@+id/textView9" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="20dp">
+            <ImageButton
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:id="@+id/gallery"
+                android:background="@drawable/ic_menu_gallery"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="50dp"/>
+        <ImageButton
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:id="@+id/picture"
+            android:background="@drawable/ic_menu_camera"
+            android:layout_alignParentEnd="true" />
+
+        <ImageView
+            android:layout_width="230dp"
+            android:layout_height="230dp"
+            android:src="@drawable/default_image"
+            android:id="@+id/default_image"
+            android:scaleType="centerCrop"/>
+
+</RelativeLayout>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Log Text"
+            android:textColor="#FFF"
+            android:layout_marginTop="10dp"
+            android:id="@+id/log" />
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_marginTop="10dp"
+            android:paddingLeft="5dp"
+            android:textColor="#000"
+            android:inputType="textCapWords"
+            android:background="@drawable/edittext_style2"
+            android:id="@+id/loged_text" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="GPS Coordinates"
+            android:textColor="#FFF"
+            android:layout_marginTop="10dp"
+            android:id="@+id/textView10" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="move icon on map to change location, tap icon on right to update data."
+            android:textColor="#FFF"
+            android:layout_marginTop="2dp"
+            android:id="@+id/textView11" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+        <EditText
+            android:layout_width="267dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="10dp"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:textSize="12sp"
+            android:textColor="#000"
+            android:inputType="textCapWords"
+            android:background="@drawable/edittext_style2"
+            android:id="@+id/gpscoordinates" />
+            <ImageButton
+                android:layout_width="28dp"
+                android:layout_height="40dp"
+                android:id="@+id/gps"
+                android:background="@drawable/ic_menu_gpsmarker"
+                android:layout_alignParentEnd="true"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="5dp"/>
+        </RelativeLayout>
+
+        <fragment xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:id="@+id/map"
+            android:name="com.google.android.gms.maps.SupportMapFragment"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_marginTop="20dp"
+            >
+        </fragment>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="20dp">
+        <Button
+            android:layout_width="150dp"
+            android:layout_height="match_parent"
+            android:text="Cancel"
+            android:textSize="25sp"
+            android:textColor="#FFF"
+            android:background="@drawable/button_style_orange"
+            android:textAllCaps="false"
+            android:id="@+id/cancel" />
+        <Button
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:text="Save"
+            android:textColor="#FFF"
+            android:id="@+id/save"
+            android:textSize="25sp"
+            android:background="@drawable/button_style_blue"
+            android:textAllCaps="false"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true" />
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="*this will save data on device only, please sync to upload to database."
+            android:textColor="#FFF"
+            android:textSize="11sp"
+            android:layout_marginTop="15dp"
+            android:gravity="bottom"
+            android:layout_weight="0.02"
+            />
+    </LinearLayout>
+    </ScrollView>
+</android.support.design.widget.CoordinatorLayout>
